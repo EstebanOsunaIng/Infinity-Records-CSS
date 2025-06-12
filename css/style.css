@@ -8,8 +8,12 @@
 }
 body{
     background-color: var(--Rich-Black);
-
+    
 }
+
+/* a{
+  color: var(--Cinnabar);
+} */
 .navbar-main {
     height: 6rem;
     background-size: cover;
@@ -124,5 +128,13 @@ body{
   object-fit: contain;
   border-radius: 8px;
   margin-bottom: 1rem;
+}
+.main-wrapper {
+  padding: 3rem 1rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1300px;
+  background-color: #131418; 
+  color: #fefefe;
 }
 
