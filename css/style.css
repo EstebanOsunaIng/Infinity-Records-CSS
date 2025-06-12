@@ -1,4 +1,64 @@
 
+:root {
+    /** Colors */
+    --Cinnabar: #fefefe;
+    --Old-Gold: #7e5af0;
+    --Rich-Black:#131418;
+    --fuente-principal: 'Be Vietnam Pro', Bitter;
+}
+body{
+    background-color: var(--Rich-Black);
+
+}
+.navbar-main {
+    height: 6rem;
+    background-size: cover;
+    display: flex;
+}
+
+
+.navbar {
+    display: flex;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    color: #7e5af0;
+    font-size: 9px;
+    align-items:center;
+    width: 10%;
+    padding: 0 4rem;
+    font-family: var(--fuente-principal);
+}
+.nav-links-container {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+.nav-rigth{
+    width: 10%;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 76%;
+    font-family: var(--fuente-principal);
+    justify-content: end;
+    gap: 4rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fefefe
+}
+
+.icons-navbar {
+    display: flex;
+    width: 15%;
+    justify-content: center;
+}
 
 .main {
   background: url('./../img/png-transparent-concert-stage-music-festival-magic-others-photography-performance-stage.png') center/cover no-repeat;
@@ -65,7 +125,4 @@
   border-radius: 8px;
   margin-bottom: 1rem;
 }
-
-
-
 
