@@ -73,6 +73,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
 .latest-releases {
@@ -105,6 +106,10 @@ body{
   cursor: pointer;
 }
 
+.container {
+  color: white;
+}
+
 .cards {
   display: flex;
   gap: 2rem;
@@ -132,14 +137,14 @@ body{
   border-radius: 8px;
   margin-bottom: 1rem;
 }
-.main-wrapper {
+/* .main-wrapper {
   padding: 3rem 1rem;
   margin: 2rem auto;
   width: 90%;
   max-width: 1300px;
   background-color: #131418; 
   color: #fefefe;
-}
+} */
 
 .footer-caja {
     justify-content: center;
