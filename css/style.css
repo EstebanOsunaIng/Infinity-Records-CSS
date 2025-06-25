@@ -174,3 +174,11 @@ li.footer-li a {
 .foooter-caja3{
     color: #9CABBA;
 }
+
+@media ( max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-end;
+    }
+}
