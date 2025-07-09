@@ -1,185 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cinzel:wght@400..900&display=swap');
+/* ============================================
+   Infinity Records - style-canciones.css
+   Página de Canciones con mismo diseño futurista
+   ============================================ */
 
+/* Importar fuentes y definir variables */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700;900&family=Orbitron:wght@400;700&display=swap');
 
 :root {
-    /** Colors */
-    --Cinnabar: #fefefe;
-    --Old-Gold: #7e5af0;
-    --Rich-Black:#131418;
-    --fuente-principal: 'Be Vietnam Pro', Bitter;
-}
-body{
-    background-color: var(--Rich-Black);
-    
+  --color-primary: #0ff;   /* Cyan neon */
+  --color-accent: #0f0;    /* Green neon */
+  --color-bg: #000;        /* Fondo principal */
+  --color-section: #111;   /* Fondo secciones */
+  --font-main: 'Orbitron', sans-serif;
+  --font-secondary: 'Be Vietnam Pro', sans-serif;
 }
 
-/* a{
-  color: var(--Cinnabar);
-} */
-.navbar-main {
-    height: 6rem;
-    background-size: cover;
-    display: flex;
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: #fff;
+  font-family: var(--font-main);
+  overflow-x: hidden;
 }
 
-
-.navbar {
-    display: flex;
-    width: 100%;
-}
-
-.logo {
-    display: flex;
-    color: #7e5af0;
-    font-size: 9px;
-    align-items:center;
-    width: 10%;
-    padding: 0 4rem;
-    font-family: var(--fuente-principal);
-}
-.nav-links-container {
-    display: flex;
-    width: 80%;
-    justify-content: center;
-}
-.nav-rigth{
-    width: 10%;
-}
-.nav-links {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    width: 76%;
-    font-family: var(--fuente-principal);
-    justify-content: end;
-    gap: 4rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #fefefe
-}
-
-.icons-navbar {
-    display: flex;
-    width: 15%;
-    justify-content: center;
-}
-
-.main {
-  background: url('./../img/png-transparent-concert-stage-music-festival-magic-others-photography-performance-stage.png') center/cover no-repeat;
-  height: 60vh;
+header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.latest-releases {
-    padding: 2rem 0;
-}
-
-.latest-releases h3 {
-  padding: 2rem 2rem;
-  color: var(--Old-Gold);
-}
-.main-interior {
-  text-align: center;
+  padding: 20px 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
   background: rgba(0, 0, 0, 0.6);
-  padding: 5rem;
-  border-radius: 10px;
-  gap: 1.5rem;
+  backdrop-filter: blur(5px);
 }
 
-.main-interior h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+header h1 {
+  font-weight: 700;
+  color: var(--color-primary);
 }
 
-.main-interior button {
-  padding: 0.6rem 1.2rem;
-  border: none;
-  background-color: #9c5eff;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
+nav {
+  position: relative;
+  left: -147px;
 }
 
-.container {
-  color: white;
+header nav a {
+  margin-left: 20px;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-family: var(--font-secondary);
+  transition: 0.3s;
 }
 
-.cards {
+header nav a:hover {
+  color: var(--color-accent);
+}
+
+.hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.4);
+}
+
+.hero-content {
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 50px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  background-clip: text;          
+  -webkit-background-clip: text;  
+  -webkit-text-fill-color: transparent; 
+}
+
+.hero p {
+  font-size: 20px;
+  margin-top: 10px;
+  font-family: var(--font-secondary);
+}
+
+section {
+  padding: 100px 50px;
+  background: var(--color-section);
+}
+
+.section-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-secondary);
+}
+
+/* =============================
+   📀 Cards para canciones
+   ============================= */
+
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  justify-items: center;
 }
 
 .card {
-  background-color: #1a1a2e;
-  padding: 1rem;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
   text-align: center;
-  width: 220px;
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
+  transition: transform 0.4s, box-shadow 0.4s;
+  min-width: 220px;
 }
 
 .card img {
   width: 100%;
+  max-width: 100%;
   height: 200px;
-  object-fit: contain;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-/* .main-wrapper {
-  padding: 3rem 1rem;
-  margin: 2rem auto;
-  width: 90%;
-  max-width: 1300px;
-  background-color: #131418; 
-  color: #fefefe;
-} */
-
-.footer-caja {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  border-radius: 15px;
+  object-fit: cover;
+  display: block;
 }
 
-ul.infoG {
-    display: flex
-;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    gap: 7rem;
+.card h4 {
+  margin-top: 15px;
+  font-family: var(--font-secondary);
 }
 
-li.footer-li a {
-    text-decoration: none;
-    color: #7e5af0;
+.card p {
+  margin-top: 5px;
+  font-family: var(--font-secondary);
+  color: var(--color-primary);
 }
 
-.foooter-caja2 {
-    color: #9CABBA;
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 0 30px var(--color-primary);
 }
 
-.foooter-caja3{
-    color: #9CABBA;
+/* =============================
+   🎠 Carrusel (opcional)
+   ============================= */
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.songs-section {
-  padding: 3rem 0;
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease;
 }
 
-.songs-section h2 {
-  padding-left: 2rem;
-  color: var(--Old-Gold);
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 255, 255, 0.5);
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 255, 0, 0.7);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* =============================
+   📌 Footer
+   ============================= */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--color-bg);
+  font-family: var(--font-secondary);
 }

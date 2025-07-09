@@ -1,222 +1,235 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cinzel:wght@400..900&display=swap');
+/*  Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700;900&display=swap');
 
-
+/* Variables globales */
 :root {
-    /** Colors */
-    --Cinnabar: #fefefe;
-    --Old-Gold: #7e5af0;
-    --Rich-Black:#131418;
-    --fuente-principal: 'Be Vietnam Pro', Bitter;
-}
-body{
-    background-color: var(--Rich-Black);
-    
-}
+  /* 🎨 Colores */
+  --color-primary: #0ff;  /* Cian neon */
+  --color-accent: #0f0;   /* Verde neon */
+  --color-bg: #000;       /* Fondo negro */
+  --color-bg-section: #111; /* Fondo secciones */
+  --color-text: #fff;     /* Texto blanco */
+  --color-btn-hover: #0f0;
 
-/* a{
-  color: var(--Cinnabar);
-} */
-.navbar-main {
-    height: 6rem;
-    background-size: cover;
-    display: flex;
+  /* Fuentes */
+  --font-primary: 'Orbitron', sans-serif;
+  --font-secondary: 'Be Vietnam Pro', sans-serif;
 }
 
 
-.navbar {
-    display: flex;
-    width: 100%;
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  overflow-x: hidden;
 }
 
-.logo {
-    display: flex;
-    color: #7e5af0;
-    font-size: 9px;
-    align-items:center;
-    width: 10%;
-    padding: 0 4rem;
-    font-family: var(--fuente-principal);
-}
-.nav-links-container {
-    display: flex;
-    width: 80%;
-    justify-content: center;
-    
-}
-.hamburger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-.nav-rigth{
-    width: 10%;
-}
-.nav-links {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    width: 76%;
-    font-family: var(--fuente-principal);
-    justify-content: end;
-    gap: 4rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #fefefe
-}
-
-.icons-navbar {
-    display: flex;
-    width: 15%;
-    justify-content: center;
-}
-.main {
-  position: relative;
-  height: 60vh;
+header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  color: white;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+header h1 {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+nav {
+  position: relative;
+  left: -147px;
+}
+
+header nav a {
+  margin-left: 20px;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  color: var(--color-accent);
+}
+
+/*HERO*/
+.hero {
+  position: relative;
+  height: 100vh;
   overflow: hidden;
 }
 
-.background-video {
+#bg-video {
   position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.4);
 }
 
-.main-interior {
-  position: relative; /* Para que quede sobre el video */
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 5rem;
-  border-radius: 10px;
-  gap: 1.5rem;
-}
-
-
-.latest-releases {
-    padding: 2rem 0;
-}
-
-.latest-releases h3 {
-  padding: 2rem 2rem;
-  color: var(--Old-Gold);
-}
-.main-interior {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 5rem;
-  border-radius: 10px;
-  gap: 1.5rem;
-}
-
-.main-interior h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.main-interior button {
-  padding: 0.6rem 1.2rem;
-  border: none;
-  background-color: #9c5eff;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.container {
-  color: white;
-}
-
-.cards {
+.hero-content {
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.card {
-  background-color: #1a1a2e;
-  padding: 1rem;
-  border-radius: 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   text-align: center;
-  width: 220px;
-  transition: transform 0.2s ease;
 }
 
-.card:hover {
-  transform: scale(1.05);
+.hero h2 {
+  font-size: 60px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 22px;
+  margin-top: 10px;
+  font-family: var(--font-secondary);
+}
+
+.hero button {
+  margin-top: 30px;
+  background: var(--color-primary);
+  border: none;
+  padding: 15px 40px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: var(--color-btn-hover);
+}
+
+/* Secciones Generales*/
+section {
+  padding: 100px 50px;
+}
+
+.featured-artists,
+.upcoming-events {
+  background: var(--color-bg-section);
+  margin-top: -5px;
+}
+
+.featured-artists h3,
+.upcoming-events h3 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-secondary);
+}
+
+/* Carrusel*/
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 255, 255, 0.5);
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--color-text);
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 255, 0, 0.7);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/*Cards Artistas*/
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+  min-width: 250px;
+  margin: 44px 16px;
 }
 
 .card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-/* .main-wrapper {
-  padding: 3rem 1rem;
-  margin: 2rem auto;
-  width: 90%;
-  max-width: 1300px;
-  background-color: #131418; 
-  color: #fefefe;
-} */
-
-.footer-caja {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-ul.infoG {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    gap: 7rem;
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 0 30px var(--color-primary);
 }
 
-li.footer-li a {
-    text-decoration: none;
-    color: #7e5af0;
+/* Eventos*/
+
+.events-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.foooter-caja2 {
-    color: #9CABBA;
+.event-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  padding: 20px 40px;
+  border-radius: 15px;
+  transition: transform 0.4s, box-shadow 0.4s;
 }
 
-.foooter-caja3{
-    color: #9CABBA;
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px var(--color-accent);
 }
 
-@media ( max-width: 768px) {
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      align-items: flex-end;
-      display: none;
-    }
-    .nav-links {
-    display: none;
-  }
+/*Footer*/
 
-  .hamburger {
-    display: block;
-  }
+footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--color-bg);
+  font-family: var(--font-secondary);
 }
 
 /* Artists Section */
