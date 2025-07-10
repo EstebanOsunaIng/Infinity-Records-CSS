@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infinity Records | Canciones</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700;900&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="SONGS/css-songs/styleSongs.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Infinity Records</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="songs.html">Canciones</a>
+      <a href="artists.html">Artistas</a>
+      <a href="albums.html">Albumnes</a>
+      <a href="#">Eventos</a> 
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" data-aos="fade-up">
+    <video autoplay muted loop id="bg-video">
+      <source src="img/globe.mp4" type="video/mp4" />
+      Tu navegador no soporta video.
+    </video>
+    <div class="hero-content">
+      <h2>Explora Canciones</h2>
+      <p>Lo mejor en tendencias, top y recomendadas.</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: TENDENCIAS -->
+  <section data-aos="fade-up">
+    <h3 class="section-title">Tendencias</h3>
+    <div class="song-grid">
+      <div class="card">
+        <img src="img/04c439a6af435dca3d54628eef5f298a.1000x1000x1.png" alt="Canción 1">
+        <h4>Hit Urbano</h4>
+        <p>DFZM</p>
+      </div>
+      <div class="card">
+        <img src="img/4a12f62e205ea510518f4f1ce53ad4f4.1000x1000x1.png" alt="Canción 2">
+        <h4>Reggaeton</h4>
+        <p>Ryan Castro</p>
+      </div>
+      <div class="card">
+        <img src="img/7e904f65a930a7d45c4466d897f031a9.961x1000x1.png" alt="Canción 3">
+        <h4>Trap </h4>
+        <p>Kris R</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: MÁS ESCUCHADAS (Carrusel) -->
+  <section data-aos="fade-up">
+    <h3 class="section-title">Más Escuchadas</h3>
+    <div class="carousel-container">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-track">
+        <div class="card">
+          <img src="img/RYAN_CASTRO_BOGOTA-jpg.webp" alt="Canción 4">
+          <h4>Flow Total</h4>
+          <p>Ryan Castro</p>
+        </div>
+        <div class="card">
+          <img src="img/tusa.jpg" alt="Canción 5">
+          <h4>Latin Beat</h4>
+          <p>Karol G ft Nicki Minaj</p>
+        </div>
+        <div class="card">
+          <img src="img/yhlqmdlg.webp" alt="Canción 6">
+          <h4>Trap King</h4>
+          <p>Bad Bunny</p>
+        </div>
+        <div class="card">
+          <img src="img/yhlqmdlg.webp" alt="Canción 6">
+          <h4>Trap King</h4>
+          <p>Bad Bunny</p>
+        </div>
+        <div class="card">
+          <img src="img/yhlqmdlg.webp" alt="Canción 6">
+          <h4>Trap King</h4>
+          <p>Bad Bunny</p>
+        </div>
+        <div class="card">
+          <img src="img/yhlqmdlg.webp" alt="Canción 6">
+          <h4>Trap King</h4>
+          <p>Bad Bunny</p>
+        </div>
+        <div class="card">
+          <img src="img/yhlqmdlg.webp" alt="Canción 6">
+          <h4>Trap King</h4>
+          <p>Bad Bunny</p>
+        </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: RECOMENDADAS -->
+  <section data-aos="fade-up">
+    <h3 class="section-title">Recomendadas</h3>
+    <div class="song-grid">
+      <div class="card">
+        <img src="/img/cover7.jpg" alt="Canción 7">
+        <h4>Fresh Vibes</h4>
+        <p>Artista D</p>
+      </div>
+      <div class="card">
+        <img src="/img/cover8.jpg" alt="Canción 8">
+        <h4>Summer Hits</h4>
+        <p>Artista E</p>
+      </div>
+      <div class="card">
+        <img src="/img/cover9.jpg" alt="Canción 9">
+        <h4>Reggaeton Night</h4>
+        <p>Artista F</p>
+      </div>
+    </div>
+  </section>
+
+  <footer data-aos="fade-up">
+    <p>© 2025 Infinity Records</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="carrusel.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: false, duration: 1000, easing: 'ease-in-out' });
+  </script>
+</body>
+
+</html>

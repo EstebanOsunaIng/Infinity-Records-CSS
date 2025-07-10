@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinity Records</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="HOME/css-home/style.css">
+</head>
+
+
+
+<body>
+    <header>
+        <h1>Infinity Records</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="songs.html">Canciones</a>
+            <a href="artists.html">Artistas</a>
+            <a href="albums.html">Albumnes</a>
+            <a href="#">Eventos</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
+
+    <section class="hero" data-aos="fade-right" data-aos-delay="100">
+        <video autoplay muted loop id="bg-video">
+            <source src="img/globe.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
+        <div class="hero-content">
+            <h2>Descubre artistas emergentes</h2>
+            <p>Explora, escucha y apoya talento nuevo en la escena musical.</p>
+            <button>Explorar ahora</button>
+        </div>
+    </section>
+
+    <section class="featured-artists" data-aos="fade-down" data-aos-delay="150">
+        <h3>Artistas Destacados</h3>
+        <div class="carousel-container">
+            <button class="carousel-btn prev">&#10094;</button>
+            <div class="carousel-track">
+                <div class="card">
+                    <img src="img/rauw.webp" alt="Rauw Alejandro">
+                    <h4>Rauw Alejandro</h4>
+                </div>
+                <div class="card">
+                    <img src="img/rels-b.webp" alt="Rels B">
+                    <h4>Rels B</h4>
+                </div>
+                <div class="card">
+                    <img src="img/RYAN_CASTRO_BOGOTA-jpg.webp" alt="Ryan Castro">
+                    <h4>Ryan Castro</h4>
+                </div>
+                <div class="card">
+                    <img src="img/Lia_4.webp" alt="Lia">
+                    <h4>LIA</h4>
+                </div>
+                <div class="card">
+                    <img src="img/Lia_4.webp" alt="Lia">
+                    <h4>LIA</h4>
+                </div>
+                <div class="card">
+                    <img src="img/Lia_4.webp" alt="Lia">
+                    <h4>LIA</h4>
+                </div>
+                <div class="card">
+                    <img src="img/Lia_4.webp" alt="Lia">
+                    <h4>LIA</h4>
+                </div>
+                <!-- Agrega más cards según necesites -->
+            </div>
+            <button class="carousel-btn next">&#10095;</button>
+        </div>
+    </section>
+
+
+    <section class="upcoming-events" data-aos="fade-up" data-aos-delay="120">
+        <h3>Próximos Eventos</h3>
+        <div class="events-list">
+            <div class="event-card">
+                <h4>Live Showcase</h4>
+                <p>20 Agosto 2025 - Bogotá</p>
+            </div>
+            <div class="event-card">
+                <h4>Festival Urbano</h4>
+                <p>05 Septiembre 2025 - Medellín</p>
+            </div>
+        </div>
+    </section>
+
+    <footer data-aos="fade-up" data-aos-delay="150">
+        <p>© 2025 Infinity Records</p>
+    </footer>
+
+    <script src="/js/scroll.js"></script>
+    <script src="js/carrusel.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false, // Animar cada vez que entra al viewport
+            duration: 1000, // Duración en ms
+            easing: 'ease-in-out', // Efecto de entrada
+        });
+    </script>
+</body>
+
+</html>
+
