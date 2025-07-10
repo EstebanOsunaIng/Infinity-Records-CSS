@@ -195,3 +195,48 @@ li.footer-li a {
     display: block;
   }
 }
+
+
+
+/* events*/
+
+.events h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Be Vietnam Pro', serif;
+    color: #fff;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.event-date {
+    color: #aaa;
+    font-size: 0.9rem;
+}
