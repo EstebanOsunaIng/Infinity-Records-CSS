@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Artista - Infinity Records</title>
+
+  <!-- Fuente Orbitron -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="events-form.css" />
+  <link rel="stylesheet" href="HOME/css-home/style.css" />
+
+  <!-- Íconos -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Header original -->
+  <header>
+    <h1>Infinity Records</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="songs.html">Canciones</a>
+      <a href="artists.html">Artistas</a>
+      <a href="albums.html">Albumnes</a>
+      <a href="events.html">Eventos</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop id="bg-video-form">
+    <source src="../img/globe.mp4" type="video/mp4" />
+    Tu navegador no soporta videos HTML5.
+  </video>
+
+  <!-- Formulario -->
+  <section class="form-register">
+    <div class="form-container">
+      <h2>Únete al universo de Infinity Records</h2>
+      <form class="register-form">
+        <div class="form-group">
+          <label for="artisticName">Nombre artístico</label>
+          <input type="text" id="artisticName" placeholder="Ej: El Cósmico" required />
+        </div>
+
+        <div class="form-group">
+          <label for="realName">Nombre real</label>
+          <input type="text" id="realName" placeholder="Ej: Juan Romero" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" placeholder="email@ejemplo.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="genre">Género musical</label>
+          <select id="genre" required>
+            <option value="">Selecciona tu estilo</option>
+            <option value="rap">Rap</option>
+            <option value="trap">Trap</option>
+            <option value="reggaeton">Reggaetón</option>
+            <option value="electro">Electro</option>
+            <option value="otros">Otros</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="photo">Foto de perfil</label>
+          <input type="file" id="photo" accept="image/*" />
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <i class="fas fa-star"></i> ¡Enviar registro!
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer (aquí puedes pegar el tuyo si lo tienes) -->
+  <footer>
+    <p style="text-align:center; color:#fff; padding: 2rem;">© 2025 Infinity Records. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

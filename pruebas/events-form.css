@@ -1,0 +1,175 @@
+
+/*  Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700;900&display=swap');
+
+/* Variables globales */
+:root {
+  /* 🎨 Colores */
+  --color-primary: #0ff;  /* Cian neon */
+  --color-accent: #0f0;   /* Verde neon */
+  --color-bg: #000;       /* Fondo negro */
+  --color-bg-section: #111; /* Fondo secciones */
+  --color-text: #fff;     /* Texto blanco */
+  --color-btn-hover: #0f0;
+
+  /* Fuentes */
+  --font-primary: 'Orbitron', sans-serif;
+  --font-secondary: 'Be Vietnam Pro', sans-serif;
+}
+
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+header h1 {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+nav {
+  position: relative;
+  left: -147px;
+}
+
+header nav a {
+  margin-left: 20px;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  color: var(--color-accent);
+}
+
+
+
+
+/* ============================
+   VIDEO DE FONDO
+============================ */
+#bg-video-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.4);
+}
+
+/* ============================
+   FORMULARIO SOBRE EL VIDEO
+============================ */
+.form-register {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* CONTENEDOR DEL FORMULARIO */
+.form-container {
+  background: rgba(0, 0, 0, 0.75);
+  border: 2px solid #0ff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+/* TÍTULO */
+.form-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #0ff;
+  margin-bottom: 2rem;
+}
+
+/* CAMPOS DEL FORMULARIO */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #111;
+  color: #0ff;
+  border: 1px solid #0ff;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* BOTÓN DE ENVÍO */
+.submit-btn {
+  background-color: #0ff;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submit-btn:hover {
+  background-color: #00f0f0;
+  transform: translateY(-2px);
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem;
+  }
+}
