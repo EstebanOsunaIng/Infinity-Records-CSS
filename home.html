@@ -39,41 +39,31 @@
 
     <section class="featured-artists" data-aos="fade-down" data-aos-delay="150">
         <h3>Artistas Destacados</h3>
-        <div class="carousel-container">
-            <button class="carousel-btn prev">&#10094;</button>
-            <div class="carousel-track">
-                <div class="card">
+        <div class="slider">
+            <ul>
+                <li class="active">
                     <img src="img/rauw.webp" alt="Rauw Alejandro">
                     <h4>Rauw Alejandro</h4>
-                </div>
-                <div class="card">
+                </li>
+                <li>
                     <img src="img/rels-b.webp" alt="Rels B">
-                    <h4>Rels B</h4>
-                </div>
-                <div class="card">
+                    <h4>Rauw Alejandro</h4>
+                </li>
+                <li>
                     <img src="img/RYAN_CASTRO_BOGOTA-jpg.webp" alt="Ryan Castro">
-                    <h4>Ryan Castro</h4>
-                </div>
-                <div class="card">
-                    <img src="img/Lia_4.webp" alt="Lia">
-                    <h4>LIA</h4>
-                </div>
-                <div class="card">
-                    <img src="img/Lia_4.webp" alt="Lia">
-                    <h4>LIA</h4>
-                </div>
-                <div class="card">
-                    <img src="img/Lia_4.webp" alt="Lia">
-                    <h4>LIA</h4>
-                </div>
-                <div class="card">
-                    <img src="img/Lia_4.webp" alt="Lia">
-                    <h4>LIA</h4>
-                </div>
-                <!-- Agrega más cards según necesites -->
-            </div>
-            <button class="carousel-btn next">&#10095;</button>
+                    <h4>Rauw Alejandro</h4>
+                </li>
+                <li>
+                    <img src="img/Lia_4.webp" alt="LIA">
+                    <h4>Rauw Alejandro</h4>
+                </li>
+                <li>
+                    <img src="img/Lia_4.webp" alt="LIA">
+                    <h4>Rauw Alejandro</h4>
+                </li>
+            </ul>
         </div>
+
     </section>
 
 
@@ -105,7 +95,19 @@
             easing: 'ease-in-out', // Efecto de entrada
         });
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".slider li").on("click", function () {
+                var item = $(this),
+                    pos = "-" + (item.index() * 515) + "px";
+
+                item.addClass("active").siblings().removeClass("active");
+                $(".slider ul").css("left", pos);
+            });
+        });
+    </script>
 </body>
 
 </html>
-
